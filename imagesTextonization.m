@@ -227,8 +227,8 @@ for i=1:textonized_images_inFolder_nFile
     [n,m]=size(textonized_Im);
     textonized_Im = im2double(textonized_Im);
     textonized_Im=imadjust(textonized_Im,[min(textonized_Im(:)),max(textonized_Im(:))],[0,1]);
-% %     subplot(textonized_images_inFolder_nFile,2,(i-1)*2+1);imshow(textonized_Im);title('Textonized Image');
-% %     subplot(textonized_images_inFolder_nFile,2,(i-1)*2+2);imhist(textonized_Im);title('Textons dist.');axis([-0.1,1.1,0,1000+(sum(sum(textonized_Im==mode(mode(textonized_Im)))))]);
+    subplot(textonized_images_inFolder_nFile,2,(i-1)*2+1);imshow(textonized_Im);title('Textonized Image');
+    subplot(textonized_images_inFolder_nFile,2,(i-1)*2+2);imhist(textonized_Im);title('Textons dist.');axis([-0.1,1.1,0,1000+(sum(sum(textonized_Im==mode(mode(textonized_Im)))))]);
 end
 
 out_fname_View_fig = 'distFig.fig';
